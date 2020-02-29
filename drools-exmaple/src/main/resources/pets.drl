@@ -1,0 +1,10 @@
+package KieRule;
+import com.example.droolsexmaple.model.Pet;
+
+rule "Pet Name"
+
+when
+petObject : Pet(name=="Ash" && type=="Dog");
+then
+petObject.setSound("Woof");
+end;
