@@ -33,9 +33,9 @@ dependencies {
 	implementation("org.drools:drools-compiler:$droolsVersion")
 
 	// Swagger
-	compile("io.springfox:springfox-swagger2:$swaggerVersion")
-	compile("io.springfox:springfox-swagger-ui:$swaggerVersion")
-	compile("com.google.googlejavaformat:google-java-format:$googleVersion")
+	implementation("io.springfox:springfox-swagger2:$swaggerVersion")
+	implementation("io.springfox:springfox-swagger-ui:$swaggerVersion")
+	implementation("com.google.googlejavaformat:google-java-format:$googleVersion")
 
 	// Lombok
 	annotationProcessor("org.projectlombok:lombok:$lombokVersion")
@@ -53,9 +53,12 @@ dependencies {
 // configure spotless
 spotless {
 	java {
-		googleJavaFormat()
+		target '**/*.java'
+		googleJavaFormat().aosp()
 	}
 }
+
+project.build.dependsOn(spotlessApply)
 
 test {
 	useJUnitPlatform()
