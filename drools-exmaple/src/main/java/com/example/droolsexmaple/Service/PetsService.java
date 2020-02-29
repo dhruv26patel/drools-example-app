@@ -8,10 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
+@SuppressWarnings("unchecked")
 public class PetsService {
 
-    @Autowired
-    private KieSession session;
+    @Autowired private KieSession session;
 
     public ResponseEntity getPets() {
 
@@ -24,5 +24,4 @@ public class PetsService {
 
         return new ResponseEntity(pet, HttpStatus.OK);
     }
-
 }

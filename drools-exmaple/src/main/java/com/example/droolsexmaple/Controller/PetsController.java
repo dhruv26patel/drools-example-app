@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Component
 public class PetsController {
 
-    @Autowired
-    private PetsService petsService;
+    @Autowired private PetsService petsService;
 
-    @PostMapping(value="/getPets", name="GetPets")
+    @PostMapping(value = "/getPets", name = "GetPets")
     public ResponseEntity getPets(@RequestParam(name = "parent") String parent) {
 
         return petsService.getPets();
