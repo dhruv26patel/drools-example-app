@@ -11,6 +11,6 @@ Example:
 
 #
 
-### How can you use rule Engine?
+### How to use rule Engine?
 You can pass an [object](https://github.com/dhruv26patel/drools-example-app/blob/master/drools-exmaple/src/main/java/com/example/droolsexmaple/model/Pet.java#L3) to the rule engine peform [action](https://github.com/dhruv26patel/drools-example-app/blob/master/drools-exmaple/src/main/resources/pets.drl#L10) based on the can [condition](https://github.com/dhruv26patel/drools-example-app/blob/master/drools-exmaple/src/main/resources/pets.drl#L8)
 
