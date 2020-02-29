@@ -30,3 +30,10 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Gradle
+gradlew
+gradlew.*
+
+### Properties
+local.properties
