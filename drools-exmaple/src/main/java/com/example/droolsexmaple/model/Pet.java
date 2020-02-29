@@ -1,17 +1,9 @@
 package com.example.droolsexmaple.model;
 
 public class Pet {
-    private String name;
     private String type;
-    private String sound;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    private String url;
 
     public String getType() {
         return type;
@@ -21,11 +13,11 @@ public class Pet {
         this.type = type;
     }
 
-    public String getSound() {
-        return sound;
+    public String getUrl() {
+        return url;
     }
 
-    public void setSound(String sound) {
-        this.sound = sound;
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -15,8 +15,7 @@ public class PetsController {
     @Autowired private PetsService petsService;
 
     @PostMapping(value = "/getPets", name = "GetPets")
-    public ResponseEntity getPets(@RequestParam(name = "parent") String parent) {
-
-        return petsService.getPets();
+    public ResponseEntity getPets(@RequestParam(name = "type") String type) {
+        return petsService.getPets(type);
     }
 }

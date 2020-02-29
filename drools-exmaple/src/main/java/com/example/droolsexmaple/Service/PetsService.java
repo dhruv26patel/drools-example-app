@@ -13,15 +13,14 @@ public class PetsService {
 
     @Autowired private KieSession session;
 
-    public ResponseEntity getPets() {
+    public ResponseEntity getPets(String type) {
 
         Pet pet = new Pet();
-        pet.setName("Ash");
-        pet.setType("Dog");
+        pet.setType(type);
 
         session.insert(pet);
         session.fireAllRules();
 
-        return new ResponseEntity(pet, HttpStatus.OK);
+        return new ResponseEntity(pet.getUrl(), HttpStatus.OK);
     }
 }
