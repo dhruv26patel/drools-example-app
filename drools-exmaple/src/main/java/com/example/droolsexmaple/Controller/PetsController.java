@@ -17,7 +17,7 @@ public class PetsController {
     @Autowired private PetsService petsService;
 
     @PostMapping(value = "/getPets", name = "GetPets")
-    public ResponseEntity getPets(@RequestParam(name = "type") String type) {
+    public ResponseEntity getPets(@RequestParam(name = "type") String type) throws Exception {
         Pet pet = petsService.getPetPicture(type);
 
         return new ResponseEntity(pet, HttpStatus.OK);
