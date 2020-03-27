@@ -1,7 +1,7 @@
 package com.example.droolsexmaple.Service;
 
 import com.example.droolsexmaple.model.Pet;
-import org.apache.poi.util.StringUtil;
+import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,17 +11,21 @@ import org.springframework.util.StringUtils;
 @SuppressWarnings("unchecked")
 public class PetsService {
 
-    @Autowired private KieSession session;
+    @Autowired private KieContainer kieContainer;
 
     public Pet getPetPicture(String type) throws Exception {
 
         Pet pet = new Pet();
         pet.setType(type);
 
-        session.insert(pet);
-        session.fireAllRules();
+        KieSession kieSession = kieContainer.newKieSession();
 
-        if(StringUtils.isEmpty(pet.getUrl())) {
+        kieSession.insert(pet);
+        kieSession.fireAllRules();
+
+        kieSession.dispose();
+
+        if (StringUtils.isEmpty(pet.getUrl())) {
             throw new Exception("Not able to set url");
         }
 
