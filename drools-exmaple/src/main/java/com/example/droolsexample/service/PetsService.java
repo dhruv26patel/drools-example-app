@@ -1,6 +1,6 @@
-package com.example.droolsexmaple.Service;
+package com.example.droolsexample.service;
 
-import com.example.droolsexmaple.model.Pet;
+import com.example.droolsexample.model.Pet;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;

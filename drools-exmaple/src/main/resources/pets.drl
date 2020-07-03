@@ -1,5 +1,5 @@
 package KieRule;
-import com.example.droolsexmaple.model.Pet;
+import com.example.droolsexample.model.Pet;
 
 dialect "mvel"
 

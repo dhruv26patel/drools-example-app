@@ -1,4 +1,4 @@
-package com.example.droolsexmaple.model;
+package com.example.droolsexample.model;
 
 public class Pet {
     private String type;

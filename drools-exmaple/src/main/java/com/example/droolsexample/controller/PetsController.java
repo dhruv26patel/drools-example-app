@@ -1,7 +1,7 @@
-package com.example.droolsexmaple.Controller;
+package com.example.droolsexample.controller;
 
-import com.example.droolsexmaple.Service.PetsService;
-import com.example.droolsexmaple.model.Pet;
+import com.example.droolsexample.model.Pet;
+import com.example.droolsexample.service.PetsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
