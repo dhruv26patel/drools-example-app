@@ -44,6 +44,12 @@ dependencies {
 	// Context
 	compileOnly("org.springframework:spring-context:5.2.3.RELEASE")
 
+	// AWS
+	implementation("com.amazonaws:aws-java-sdk:1.11.754")
+	implementation("org.springframework:spring-jms")
+	implementation("org.springframework.cloud:spring-cloud-starter-aws:2.2.2.RELEASE")
+	implementation("com.amazonaws:amazon-sqs-java-messaging-lib:1.0.6")
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

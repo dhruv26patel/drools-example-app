@@ -5,8 +5,9 @@ import org.kie.api.builder.*;
 import org.kie.api.runtime.KieContainer;
 import org.kie.internal.io.ResourceFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class DroolsConfig {
@@ -15,6 +16,8 @@ public class DroolsConfig {
     private String drlFile;
 
     @Bean
+    @ConditionalOnMissingBean
+    @Scope(BeanDefinition.SCOPE_SINGLETON)
     public KieContainer getKieContainer() {
         KieServices kieServices = KieServices.Factory.get();
 
